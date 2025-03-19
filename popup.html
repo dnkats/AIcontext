@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Context Helper</title>
+  <style>
+    body {
+      width: 350px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 10px;
+      padding: 8px;
+      resize: vertical;
+    }
+    .template-container {
+      margin-bottom: 15px;
+    }
+    .template-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .template-title {
+      font-weight: bold;
+    }
+    .template-actions {
+      display: flex;
+      gap: 5px;
+    }
+    .template-content {
+      border: 1px solid #ccc;
+      padding: 8px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      background-color: #f9f9f9;
+    }
+    .template-content:hover {
+      background-color: #f0f0f0;
+    }
+    button {
+      padding: 8px 12px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    .secondary-button {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+    .secondary-button:hover {
+      background-color: #e0e0e0;
+    }
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    #templateTitle {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    #statusMessage {
+      margin-top: 10px;
+      color: green;
+    }
+    .platform-indicator {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 12px;
+      background-color: #eaf1fb;
+      font-size: 12px;
+      margin-left: 8px;
+      color: #4285f4;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-container">
+    <h2>Add Context</h2>
+    <div id="platformIndicator" class="platform-indicator">Detecting...</div>
+  </div>
+  <textarea id="contextText" placeholder="Type your context here..."></textarea>
+  <div>
+    <button id="addContextBtn">Add to Chat</button>
+    <button id="saveTemplateBtn" class="secondary-button">Save as Template</button>
+  </div>
+  
+  <div id="saveTemplateForm" style="display: none; margin-top: 15px;">
+    <input type="text" id="templateTitle" placeholder="Template name">
+    <button id="confirmSaveBtn">Save</button>
+    <button id="cancelSaveBtn" class="secondary-button">Cancel</button>
+  </div>
+  
+  <h2>Saved Templates</h2>
+  <div id="templatesContainer"></div>
+  
+  <div id="statusMessage"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

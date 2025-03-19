@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "AI Context Helper",
+  "version": "1.0",
+  "description": "Easily add context to your conversations with AI assistants",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.anthropic.com/*", 
+        "https://*.claude.ai/*",
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*",
+        "https://*.openai.com/*",
+        "https://*.bard.google.com/*",
+        "https://*.gemini.google.com/*",
+        "https://*.perplexity.ai/*",
+        "https://*.bing.com/chat/*",
+        "https://*.copilot.microsoft.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}

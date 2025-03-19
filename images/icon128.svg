@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background -->
+  <rect width="128" height="128" rx="20" fill="#4285F4"/>
+  
+  <!-- Speech bubble -->
+  <path d="M24 36C24 29.3726 29.3726 24 36 24H92C98.6274 24 104 29.3726 104 36V76C104 82.6274 98.6274 88 92 88H68L48 108V88H36C29.3726 88 24 82.6274 24 76V36Z" fill="white"/>
+  
+  <!-- Context symbol (brackets) -->
+  <path d="M40 48H48V64H40V48Z" fill="#4285F4"/>
+  <path d="M80 48H88V64H80V48Z" fill="#4285F4"/>
+  <path d="M48 44H80V52H48V44Z" fill="#4285F4"/>
+  <path d="M48 60H80V68H48V60Z" fill="#4285F4"/>
+</svg>
