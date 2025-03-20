@@ -95,7 +95,14 @@
     },
     'copilot.microsoft.com': {
       input: [
-        'textarea[placeholder*="Ask me anything"]',
+        'textarea[placeholder*="Message Copilot"]', 
+        'textarea[placeholder*="message"]',
+        'textarea[aria-label*="Message"]',
+        'textarea[aria-label*="Copilot"]',
+        '.cib-serp-main textarea',
+        '.cib-text-input textarea',
+        '.___textarea___',
+        'div[role="textbox"]',
         'div[contenteditable="true"]'
       ],
       prefix: "Context: ",
@@ -212,8 +219,8 @@
             }
           }
           
-          // Special handling for ChatGPT.com
-          if (!textarea && platformInfo.platform === 'chatgpt.com') {
+          // Special handling for ChatGPT.com and Microsoft Copilot
+          if (!textarea && (platformInfo.platform === 'chatgpt.com' || platformInfo.platform === 'copilot.microsoft.com')) {
             // Try to find the input within all shadow roots
             const allElements = document.querySelectorAll('*');
             for (const element of allElements) {
